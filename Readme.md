@@ -366,7 +366,7 @@ __Arguments__
 <a name="setRoleAttribute" />
 ### setRoleAttribute( [role, attribute, value, callback] )
 
-Retrieves an attribute for a role from the system.
+Sets an attribute for a role from the system.
 
 __Arguments__
 
@@ -380,7 +380,7 @@ __Arguments__
 <a name="getRoleAttribute" />
 ### getRoleAttribute( [role, attribute, callback] )
 
-Removes a resource from the system. 
+Retrieves an attribute for a role from the system
 
 __Arguments__
 
