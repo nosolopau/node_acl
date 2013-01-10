@@ -15,9 +15,9 @@ implemented for supporting other databases.
 
 Follow [optimalbits](http://twitter.com/optimalbits) for news and updates regarding this library.
 
-##Status
+## About this fork
 
-[![BuildStatus](https://secure.travis-ci.org/OptimalBits/node_acl.png?branch=master)](http://travis-ci.org/optimalbits/node_acl)
+This is a fork of Node ACL lib by Optimalbits, with two extra operations to set and retrieve attributes for a role (getRoleAttribute and setRoleAttribute).
 
 ##Features
 
@@ -48,8 +48,9 @@ Using npm:
 * [isAllowed](#isAllowed)
 * [areAnyRolesAllowed](#areAnyRolesAllowed)
 * [whatResources](#whatResources)
-* [clean](#clean)
 * [middleware](#middleware)
+* [setRoleAttribute](#setRoleAttribute)
+* [getRoleAttribute](#getRoleAttribute)
 
 ##Examples
 
@@ -312,6 +313,7 @@ __Arguments__
     callback    {Function} Callback called wish the result.
 
 ---------------------------------------
+
 <a name="areAnyRolesAllowed" />
 ### areAnyRolesAllowed( roles, resource, permissions, function(err, allowed) )
   
@@ -325,6 +327,7 @@ __Arguments__
     callback    {Function} Callback called wish the result.
 
 ---------------------------------------
+
 <a name="whatResources" />
 ### whatResources(role, function(err, {resourceName: [permissions]})
 
@@ -357,6 +360,33 @@ __Arguments__
     numPathComponents {Number} number of components in the url to be considered part of the resource name.
     userId 			  {String} the user id for the acl system (or if not specified, req.userId)
     permissions 	  {Array} the permissions to check for.
+
+---------------------------------------
+
+<a name="setRoleAttribute" />
+### setRoleAttribute( [role, attribute, value, callback] )
+
+Retrieves an attribute for a role from the system.
+
+__Arguments__
+
+    role              {String} Role to change attribute.
+    attribute         {String} Attribute to be changed.
+    value             {String} New value for the specified attribute.
+    callback          {Function} Callback called when finished.
+
+---------------------------------------
+
+<a name="getRoleAttribute" />
+### getRoleAttribute( [role, attribute, callback] )
+
+Removes a resource from the system. 
+
+__Arguments__
+
+    role              {String} Role to retrieve attribute.
+    attribute         {String} Attribute to be retrieved.
+    callback          {Function} Callback called when finished.
 
 ##Tests
 
